@@ -1,0 +1,40 @@
+{
+  "name": "gym-gweizy-desktop",
+  "version": "3.0.0",
+  "description": "نظام إدارة النادي الرياضي - تطبيق ديسكتوب",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "build:exe": "electron-builder --win"
+  },
+  "author": "Gym Gweizy",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^41.3.0",
+    "electron-builder": "^26.8.1"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "sqlite3": "^6.0.1"
+  },
+  "build": {
+    "appId": "com.gymgweizy.app",
+    "productName": "جيم غويزي",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "language": "Arabic",
+      "licenseText": "جيم غويزي - نظام إدارة النادي الرياضي"
+    }
+  }
+}
